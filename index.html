@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Abhay Tiwarii | Professional CV</title>
+
+  <meta
+    name="description"
+    content="Professional CV and profile of Abhay Tiwarii — Safety, Computer Applications, Leadership and Event Management."
+  />
+
+  <style>
+    :root {
+      --primary: #17324d;
+      --primary-2: #234f73;
+      --accent: #c89b3c;
+      --text: #1e293b;
+      --muted: #64748b;
+      --light: #f5f8fb;
+      --white: #ffffff;
+      --border: #e2e8f0;
+      --success: #237a57;
+      --shadow: 0 12px 35px rgba(15, 35, 55, 0.09);
+      --radius: 18px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #eef3f7;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 30px));
+      margin: auto;
+    }
+
+    /* NAVBAR */
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 21px;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: 0.4px;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 600;
+      color: #475569;
+      transition: 0.25s;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .menu-btn {
+      display: none;
+      border: 0;
+      background: var(--light);
+      color: var(--primary);
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    /* HERO */
+
+    .hero {
+      padding: 75px 0 60px;
+      background:
+        radial-gradient(circle at 85% 20%, rgba(200,155,60,0.12), transparent 28%),
+        linear-gradient(135deg, #ffffff 0%, #f4f8fb 100%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 310px;
+      align-items: center;
+      gap: 55px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #edf5fa;
+      color: var(--primary-2);
+      border: 1px solid #d7e5ef;
+      padding: 7px 13px;
+      border-radius: 100px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .badge::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      background: var(--success);
+      border-radius: 50%;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 7vw, 70px);
+      line-height: 1.05;
+      color: var(--primary);
+      letter-spacing: -2px;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero-subtitle {
+      margin-top: 18px;
+      font-size: 19px;
+      font-weight: 600;
+      color: #334155;
+    }
+
+    .hero-text {
+      max-width: 680px;
+      margin-top: 13px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 46px;
+      padding: 0 20px;
+      border-radius: 11px;
+      font-size: 14px;
+      font-weight: 700;
+      transition: 0.25s;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-2);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 1px solid #cbd5e1;
+      background: white;
+      color: var(--primary);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    /* PHOTO */
+
+    .profile-card {
+      position: relative;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 25px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .profile-photo {
+      width: 100%;
+      aspect-ratio: 1 / 1.12;
+      border-radius: 18px;
+      overflow: hidden;
+      background:
+        linear-gradient(135deg, #eef3f7, #dbe5ed);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #64748b;
+      text-align: center;
+      font-size: 13px;
+      padding: 30px;
+    }
+
+    .profile-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: none;
+    }
+
+    .photo-note {
+      margin-top: 12px;
+      font-size: 11px;
+      color: #94a3b8;
+      text-align: center;
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 65px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .section-title small {
+      color: var(--accent);
+      font-weight: 800;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .section-title h2 {
+      margin-top: 5px;
+      color: var(--primary);
+      font-size: 31px;
+    }
+
+    .section-title p {
+      margin: 8px auto 0;
+      max-width: 650px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* ABOUT */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 25px;
+      box-shadow: 0 6px 20px rgba(15, 35, 55, 0.04);
+    }
+
+    .card h3 {
+      color: var(--primary);
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    .info-row {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: 12px;
+      padding: 9px 0;
+      border-bottom: 1px solid #edf1f5;
+      font-size: 13px;
+    }
+
+    .info-row:last-child {
+      border-bottom: 0;
+    }
+
+    .info-label {
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    /* QUALIFICATIONS */
+
+    .qualification-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .qualification {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .qualification::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: var(--accent);
+    }
+
+    .qualification h3 {
+      font-size: 18px;
+      color: var(--primary);
+      padding-left: 10px;
+    }
+
+    .qualification .duration {
+      display: inline-block;
+      margin: 10px 0 12px 10px;
+      background: #edf5fa;
+      color: var(--primary-2);
+      padding: 5px 10px;
+      border-radius: 7px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .qualification p {
+      color: var(--muted);
+      font-size: 13px;
+      padding-left: 10px;
+    }
+
+    /* EDUCATION */
+
+    .education-list {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .education-item {
+      display: grid;
+      grid-template-columns: 105px 1fr;
+      gap: 25px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .education-year {
+      color: var(--accent);
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .education-item h3 {
+      color: var(--primary);
+      font-size: 17px;
+    }
+
+    .education-item p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* EXPERIENCE */
+
+    .experience-card {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .experience-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: start;
+      margin-bottom: 18px;
+    }
+
+    .experience-head h3 {
+      color: var(--primary);
+      font-size: 20px;
+    }
+
+    .experience-head span {
+      background: #f6f0e3;
+      color: #8b6a25;
+      padding: 6px 11px;
+      border-radius: 7px;
+      font-size: 11px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .experience-card ul {
+      list-style: none;
+    }
+
+    .experience-card li {
+      position: relative;
+      padding: 7px 0 7px 22px;
+      font-size: 14px;
+      color: #475569;
+    }
+
+    .experience-card li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--success);
+      font-weight: bold;
+    }
+
+    /* SKILLS */
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 13px;
+    }
+
+    .skill {
+      background: white;
+      border: 1px solid var(--border);
+      padding: 16px 12px;
+      border-radius: 12px;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 600;
+      color: #334155;
+      transition: 0.25s;
+    }
+
+    .skill:hover {
+      transform: translateY(-3px);
+      border-color: #c4d4df;
+      box-shadow: var(--shadow);
+    }
+
+    /* SOCIAL */
+
+    .social-box {
+      max-width: 900px;
+      margin: auto;
+      background: var(--primary);
+      color: white;
+      border-radius: 22px;
+      padding: 35px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .social-box::after {
+      content: "";
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 50%;
+      right: -60px;
+      top: -80px;
+    }
+
+    .social-box h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .social-box p {
+      color: #d7e2ec;
+      font-size: 14px;
+      max-width: 720px;
+    }
+
+    /* CONTACT */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .contact-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .contact-icon {
+      font-size: 23px;
+      margin-bottom: 7px;
+    }
+
+    .contact-card h4 {
+      color: var(--primary);
+      font-size: 14px;
+    }
+
+    .contact-card p {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 3px;
+      word-break: break-word;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #102538;
+      color: #b9c8d5;
+      text-align: center;
+      padding: 28px 15px;
+      font-size: 12px;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    /* BACK TO TOP */
+
+    .top-btn {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      width: 43px;
+      height: 43px;
+      border: 0;
+      border-radius: 50%;
+      background: var(--primary);
+      color: white;
+      cursor: pointer;
+      display: none;
+      box-shadow: var(--shadow);
+      z-index: 500;
+    }
+
+    .top-btn.show {
+      display: block;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 850px) {
+
+      .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: white;
+        border-bottom: 1px solid var(--border);
+        padding: 15px;
+        flex-direction: column;
+        gap: 0;
+        display: none;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links a {
+        display: block;
+        padding: 11px 5px;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .hero {
+        padding-top: 45px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .profile-card {
+        max-width: 280px;
+        width: 100%;
+        margin: auto;
+      }
+
+      .about-grid,
+      .qualification-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+
+      .container {
+        width: min(100% - 22px, 1120px);
+      }
+
+      section {
+        padding: 48px 0;
+      }
+
+      .hero h1 {
+        font-size: 43px;
+      }
+
+      .hero-subtitle {
+        font-size: 16px;
+      }
+
+      .hero-text {
+        font-size: 13px;
+      }
+
+      .card {
+        padding: 19px;
+      }
+
+      .info-row {
+        grid-template-columns: 105px 1fr;
+        font-size: 12px;
+      }
+
+      .education-item {
+        grid-template-columns: 75px 1fr;
+        gap: 12px;
+      }
+
+      .experience-head {
+        flex-direction: column;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 9px;
+      }
+
+      .skill {
+        font-size: 12px;
+        padding: 13px 7px;
+      }
+
+      .social-box {
+        padding: 25px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="navbar">
+    <div class="container nav-inner">
+
+      <a href="#home" class="logo">
+        Abhay<span>.</span>
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+        ☰
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#qualification">Qualifications</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+  <main id="home">
+
+    <section class="hero">
+      <div class="container hero-grid">
+
+        <div>
+
+          <div class="badge">
+            Open to Opportunities
+          </div>
+
+          <h1>
+            Abhay <span>Tiwarii</span>
+          </h1>
+
+          <div class="hero-subtitle">
+            Safety • Computer Applications • Leadership • Event Management
+          </div>
+
+          <p class="hero-text">
+            A fast learner with professional training in Fire & Industrial Safety
+            and Computer Applications, along with practical experience in team
+            coordination, leadership and community event management.
+          </p>
+
+          <div class="hero-buttons">
+            <a class="btn btn-primary" href="Abhay_Tiwarii_CV.pdf" download>
+              ↓ Download CV
+            </a>
+
+            <a class="btn btn-outline" href="tel:+917320064400">
+              ☎ Contact Me
+            </a>
+          </div>
+
+        </div>
+
+
+        <!-- OPTIONAL PHOTO -->
+        <div class="profile-card">
+
+          <div class="profile-photo" id="photoBox">
+
+            <!--
+              PHOTO LAGANE KE LIYE:
+              1. Apni photo ka naam profile.jpg rakho
+              2. Isi HTML ke saath upload karo
+              3. Neeche JS automatically image show karega
+            -->
+
+            <img id="profileImage" src="profile.jpg" alt="Abhay Tiwarii">
+
+            <div id="photoPlaceholder">
+              <strong>Profile Photo</strong>
+              <br>
+              Optional
+              <br><br>
+              Formal professional photograph
+            </div>
+
+          </div>
+
+          <div class="photo-note">
+            Professional photograph can be added later.
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+
+        <div class="section-title">
+          <small>Profile</small>
+          <h2>Personal Information</h2>
+          <p>
+            Basic personal and professional information.
+          </p>
+        </div>
+
+        <div class="about-grid">
+
+          <div class="card">
+
+            <h3>Personal Details</h3>
+
+            <div class="info-row">
+              <div class="info-label">Document Name</div>
+              <div>Abhishek Kumar</div>
+            </div>
+
+            <div class="info-row">
+              <div class="info-label">Date of Birth</div>
+              <div>21 April 2006</div>
+            </div>
+
+            <div class="info-row">
+              <div class="info-label">Father's Name</div>
+              <div>Shri Jitendra Nath Tiwari</div>
+            </div>
+
+            <div class="info-row">
+              <div class="info-label">Nationality</div>
+              <div>Indian</div>
+            </div>
+
+            <div class="info-row">
+              <div class="info-label">Marital Status</div>
+              <div>Unmarried</div>
+            </div>
+
+          </div>
+
+
+          <div class="card">
+
+            <h3>Languages</h3>
+
+            <div class="info-row">
+              <div class="info-label">Hindi</div>
+              <div>Fluent</div>
+            </div>
+
+            <div class="info-row">
+              <div class="info-label">Bhojpuri</div>
+              <div>Fluent</div>
+            </div>
+
+            <div class="info-row">
+              <div class="info-label">English</div>
+              <div>Basic conversation & understanding</div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- QUALIFICATIONS -->
+    <section id="qualification" style="background:#f8fafc;">
+      <div class="container">
+
+        <div class="section-title">
+          <small>Professional Training</small>
+          <h2>Qualifications</h2>
+          <p>
+            Professional certifications and specialized training.
+          </p>
+        </div>
+
+        <div class="qualification-grid">
+
+          <div class="card qualification">
+
+            <h3>
+              Advance Diploma in Fire & Industrial Safety Management
+            </h3>
+
+            <span class="duration">
+              12 Months
+            </span>
+
+            <p>
+              <strong>85.10%</strong> overall score
+              <br>
+              Grade: <strong>A</strong>
+              <br>
+              Certificate issued: 09 June 2025
+            </p>
+
+          </div>
+
+
+          <div class="card qualification">
+
+            <h3>
+              Diploma in Computer Application (DCA)
+            </h3>
+
+            <span class="duration">
+              6 Months
+            </span>
+
+            <p>
+              Computer applications and digital skills
+              <br>
+              Certificate issued: 07 June 2023
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- EDUCATION -->
+    <section id="education">
+
+      <div class="container">
+
+        <div class="section-title">
+          <small>Academic Background</small>
+          <h2>Education</h2>
+        </div>
+
+        <div class="education-list">
+
+          <div class="education-item">
+
+            <div class="education-year">
+              2026
+            </div>
+
+            <div>
+              <h3>Intermediate (12th) – Arts</h3>
+              <p>
+                Bihar School Examination Board (BSEB)
+                <br>
+                Percentage: <strong>60%</strong>
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="education-item">
+
+            <div class="education-year">
+              2021
+            </div>
+
+            <div>
+              <h3>Matriculation (10th)</h3>
+              <p>
+                Bihar School Examination Board (BSEB)
+                <br>
+                Percentage: <strong>57.7%</strong>
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- EXPERIENCE -->
+    <section id="experience" style="background:#f8fafc;">
+
+      <div class="container">
+
+        <div class="section-title">
+          <small>Practical Experience</small>
+          <h2>Leadership & Event Management</h2>
+          <p>
+            Practical community leadership and event coordination experience.
+          </p>
+        </div>
+
+        <div class="card experience-card">
+
+          <div class="experience-head">
+
+            <div>
+              <h3>
+                Community Event Leadership
+              </h3>
+              <p style="color:#64748b;font-size:13px;">
+                Kalash Yatra & Saraswati Puja Events
+              </p>
+            </div>
+
+            <span>
+              3 Events
+            </span>
+
+          </div>
+
+          <ul>
+
+            <li>
+              Successfully led and coordinated teams for
+              <strong>three community events</strong>, including one
+              Kalash Yatra and two Saraswati Puja events.
+            </li>
+
+            <li>
+              Managed event planning, team coordination and
+              on-ground execution from preparation through completion.
+            </li>
+
+            <li>
+              Coordinated financial activities involving
+              <strong>approximately ₹3 lakh</strong> in total event
+              budgets/transactions.
+            </li>
+
+            <li>
+              Distributed responsibilities among team members and
+              maintained coordination for smooth execution.
+            </li>
+
+            <li>
+              Developed practical experience in
+              <strong>leadership, team management, planning,
+              coordination and problem-solving.</strong>
+            </li>
+
+            <li>
+              Successfully organized and managed the
+              <strong>Kalash Yatra 2026</strong>.
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SKILLS -->
+    <section id="skills">
+
+      <div class="container">
+
+        <div class="section-title">
+          <small>Capabilities</small>
+          <h2>Computer & Digital Skills</h2>
+        </div>
+
+        <div class="skills-grid">
+
+          <div class="skill">MS Word</div>
+          <div class="skill">MS Excel</div>
+          <div class="skill">MS PowerPoint</div>
+          <div class="skill">Internet & Email</div>
+          <div class="skill">Data Entry</div>
+          <div class="skill">Documentation</div>
+          <div class="skill">Graphic Designing</div>
+          <div class="skill">Digital Content</div>
+
+        </div>
+
+
+        <div class="section-title" style="margin-top:55px;">
+          <small>Strengths</small>
+          <h2>Key Strengths</h2>
+        </div>
+
+        <div class="skills-grid">
+
+          <div class="skill">Fast Learner</div>
+          <div class="skill">Leadership</div>
+          <div class="skill">Team Coordination</div>
+          <div class="skill">Event Management</div>
+          <div class="skill">Planning</div>
+          <div class="skill">Problem Solving</div>
+          <div class="skill">Adaptability</div>
+          <div class="skill">Learning New Skills</div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SOCIAL WORK -->
+    <section style="background:#f8fafc;">
+
+      <div class="container">
+
+        <div class="social-box">
+
+          <h3>
+            Social Work & Community Participation
+          </h3>
+
+          <p>
+            Actively involved in organizing and coordinating community
+            and religious events, with practical experience in team
+            leadership, resource coordination, financial handling and
+            successful execution of community programs.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact">
+
+      <div class="container">
+
+        <div class="section-title">
+          <small>Get in Touch</small>
+          <h2>Contact</h2>
+        </div>
+
+        <div class="contact-grid">
+
+          <a class="contact-card" href="tel:+917320064400">
+
+            <div class="contact-icon">☎</div>
+
+            <h4>Phone</h4>
+
+            <p>
+              +91 73200 64400
+            </p>
+
+          </a>
+
+
+          <a class="contact-card"
+             href="mailto:abhaytiwari7320@gmail.com">
+
+            <div class="contact-icon">✉</div>
+
+            <h4>Email</h4>
+
+            <p>
+              abhaytiwari7320@gmail.com
+            </p>
+
+          </a>
+
+
+          <div class="contact-card">
+
+            <div class="contact-icon">⌖</div>
+
+            <h4>Location</h4>
+
+            <p>
+              Gopalganj, Bihar, India
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      © <span id="year"></span>
+      <strong>Abhay Tiwarii</strong>.
+      All Rights Reserved.
+    </p>
+
+  </footer>
+
+
+  <!-- BACK TO TOP -->
+
+  <button class="top-btn" id="topBtn">
+    ↑
+  </button>
+
+
+  <script>
+
+    /* CURRENT YEAR */
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+
+    /* MOBILE MENU */
+
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+
+
+    /* CLOSE MENU AFTER CLICK */
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+      });
+
+    });
+
+
+    /* PROFILE PHOTO */
+
+    const profileImage =
+      document.getElementById("profileImage");
+
+    const photoPlaceholder =
+      document.getElementById("photoPlaceholder");
+
+    profileImage.addEventListener("load", () => {
+
+      profileImage.style.display = "block";
+      photoPlaceholder.style.display = "none";
+
+    });
+
+    profileImage.addEventListener("error", () => {
+
+      profileImage.style.display = "none";
+      photoPlaceholder.style.display = "block";
+
+    });
+
+
+    /* BACK TO TOP */
+
+    const topBtn =
+      document.getElementById("topBtn");
+
+    window.addEventListener("scroll", () => {
+
+      if (window.scrollY > 450) {
+        topBtn.classList.add("show");
+      } else {
+        topBtn.classList.remove("show");
+      }
+
+    });
+
+    topBtn.addEventListener("click", () => {
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+
+    });
+
+  </script>
+
+</body>
+</html>
