@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abhay Tiwari | Safety Officer</title>
+<meta name="description" content="Abhay Tiwari - Safety Officer. Advance Diploma in Fire &amp; Industrial Safety Management, Grade A. Open to safety roles.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{--ink:#0F1B2D;--text:#3a4556;--muted:#7a8494;--gold:#A9824A;--bg:#FFFFFF;--soft:#F6F7F9;--line:#E6E9EE}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,"Segoe UI",Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;color:var(--ink);font-weight:600;line-height:1.15}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+
+header.top{border-bottom:1px solid var(--line);background:rgba(255,255,255,.94);position:sticky;top:0;z-index:5;backdrop-filter:blur(8px)}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
+.brand{font-family:Fraunces,Georgia,serif;font-weight:600;color:var(--ink);font-size:19px;text-decoration:none}
+nav{display:flex;gap:26px;font-size:14px;font-weight:500}
+nav a{text-decoration:none;color:var(--muted)}nav a:hover{color:var(--ink)}
+
+.hero{padding:72px 0 64px}
+.hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:64px;align-items:center}
+.hero h1{font-size:clamp(42px,6.5vw,68px);letter-spacing:-.5px}
+.role{margin:14px 0 20px;font-size:17px;font-weight:500;color:var(--gold)}
+.hero p{max-width:50ch;font-size:17px}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-block;padding:12px 24px;font:500 15px Inter,Arial,sans-serif;text-decoration:none;border-radius:999px;border:1px solid var(--ink);cursor:pointer;transition:background .2s,color .2s}
+.btn.primary{background:var(--ink);color:#fff}
+.btn.primary:hover{background:#1d3250}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:#fff}
+.photo{position:relative;aspect-ratio:4/5;max-width:360px;margin-left:auto;width:100%;border-radius:18px;overflow:hidden;background:var(--soft);box-shadow:0 24px 50px -24px rgba(15,27,45,.35)}
+.photo::after{content:"";position:absolute;inset:0;border-radius:18px;box-shadow:inset 0 0 0 1px rgba(15,27,45,.08);pointer-events:none}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.photo .initials{display:none;position:absolute;inset:0;align-items:center;justify-content:center;font-family:Fraunces,Georgia,serif;font-size:84px;color:var(--gold)}
+.photo.noimg .initials{display:flex}
+
+.facts{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--soft)}
+.facts .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding-top:26px;padding-bottom:26px}
+.facts b{display:block;font-family:Fraunces,Georgia,serif;font-size:26px;color:var(--ink);font-weight:600}
+.facts span{font-size:14px;color:var(--muted)}
+
+section{padding:64px 0}
+section+section{border-top:1px solid var(--line)}
+.head{display:grid;grid-template-columns:220px 1fr;gap:48px}
+.head h2{font-size:28px}
+.body>*+*{margin-top:18px}
+
+.cert h3{font-size:22px;margin-bottom:6px}
+.cert p{color:var(--muted)}
+.cert .meta{margin-top:12px;color:var(--ink);font-weight:500}
+.list{list-style:none;columns:2;column-gap:40px}
+.list li{break-inside:avoid;padding:9px 0 9px 20px;position:relative;border-bottom:1px solid var(--line)}
+.list li::before{content:"";position:absolute;left:0;top:19px;width:6px;height:6px;border-radius:50%;background:var(--gold)}
+.job h3{font-size:22px}
+.job .meta{color:var(--muted);font-size:14px;margin:4px 0 10px}
+.job ul{padding-left:18px}.job li{margin-bottom:7px}
+.kv{display:grid;grid-template-columns:150px 1fr;gap:10px 20px}
+.kv dt{color:var(--muted);font-size:14px}.kv dd{color:var(--ink);font-weight:500}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags span{border:1px solid var(--line);padding:4px 14px;border-radius:999px;font-size:14px;color:var(--ink)}
+.contact a.big{display:block;font-family:Fraunces,Georgia,serif;font-size:clamp(22px,4vw,30px);color:var(--ink);text-decoration:none;overflow-wrap:anywhere}
+.contact a.big:hover{color:var(--gold)}
+footer{border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:13px;padding:24px 0}
+
+@media (max-width:760px){
+ nav{display:none}
+ .hero{padding:40px 0}
+ .hero .wrap{grid-template-columns:1fr;gap:32px}
+ .photo{order:-1;margin:0 auto;max-width:260px}
+ .facts .wrap{grid-template-columns:repeat(2,1fr)}
+ .head{grid-template-columns:1fr;gap:16px}
+ .list{columns:1}
+ .kv{grid-template-columns:120px 1fr}
+ section{padding:44px 0}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+@media print{
+ header.top,.btns{display:none}
+ body{font-size:12.5px}
+ .hero,section{padding:18px 0}
+ .facts{background:none}
+ section{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<header class="top">
+ <div class="wrap">
+  <a class="brand" href="#top">Abhay Tiwari</a>
+  <nav aria-label="Main">
+   <a href="#profile">Profile</a><a href="#qualification">Qualification</a><a href="#skills">Safety skills</a>
+   <a href="#experience">Experience</a><a href="#contact">Contact</a>
+  </nav>
+ </div>
+</header>
+
+<main id="top">
+<div class="hero">
+ <div class="wrap">
+  <div>
+   <h1>Abhay Tiwari</h1>
+   <div class="role">Safety Officer &middot; Fire &amp; Industrial Safety</div>
+   <p>Certified in Fire &amp; Industrial Safety Management. I focus on preventing accidents through hazard checks, clear safety rules and disciplined team coordination. Available to join at any project site.</p>
+   <div class="btns">
+    <a class="btn primary" href="tel:+917320064400">Call now</a>
+    <a class="btn ghost" href="mailto:abhaytiwari7320@gmail.com">Send email</a>
+    <button class="btn ghost" onclick="window.print()">Save as PDF</button>
+   </div>
+  </div>
+  <div class="photo" id="photo">
+   <img src="profile.jpg" alt="Portrait of Abhay Tiwari" onerror="this.parentNode.classList.add('noimg');this.remove()">
+   <div class="initials" aria-hidden="true">AT</div>
+  </div>
+ </div>
+</div>
+
+<div class="facts"><div class="wrap">
+ <div><b>85.10%</b><span>Safety diploma score</span></div>
+ <div><b>Grade A</b><span>Fire &amp; Industrial Safety</span></div>
+ <div><b>12 months</b><span>Professional training</span></div>
+ <div><b>4 events</b><span>Teams led on the ground</span></div>
+</div></div>
+
+<section id="profile"><div class="wrap head">
+ <h2>Profile</h2>
+ <div class="body">
+  <dl class="kv">
+   <dt>Full name</dt><dd>Abhay Tiwari</dd>
+   <dt>Date of birth</dt><dd>21 April 2006</dd>
+   <dt>Father's name</dt><dd>Shri Jitendra Nath Tiwari</dd>
+   <dt>Nationality</dt><dd>Indian</dd>
+   <dt>Marital status</dt><dd>Unmarried</dd>
+   <dt>Languages</dt><dd>Hindi and Bhojpuri (fluent), English (basic)</dd>
+   <dt>Location</dt><dd>Gopalganj, Bihar, India</dd>
+  </dl>
+ </div>
+</div></section>
+
+<section id="qualification"><div class="wrap head">
+ <h2>Safety qualification</h2>
+ <div class="body cert">
+  <h3>Advance Diploma in Fire &amp; Industrial Safety Management</h3>
+  <p>A 12-month professional course covering fire safety and industrial safety management.</p>
+  <p class="meta">Score 85.10% &nbsp;|&nbsp; Grade A &nbsp;|&nbsp; Issued 09 June 2025</p>
+ </div>
+</div></section>
+
+<section id="skills"><div class="wrap head">
+ <h2>Core safety skills</h2>
+ <div class="body">
+  <ul class="list">
+   <li>Fire prevention and firefighting</li>
+   <li>Hazard identification and risk control</li>
+   <li>Industrial safety management</li>
+   <li>PPE use and enforcement</li>
+   <li>Safety inspections and site checks</li>
+   <li>Incident and accident reporting</li>
+   <li>Safety documentation and records</li>
+   <li>Toolbox talks and safety awareness</li>
+  </ul>
+ </div>
+</div></section>
+
+<section id="experience"><div class="wrap head">
+ <h2>Leadership experience</h2>
+ <div class="body job">
+  <div>
+   <h3>Community Event Leadership</h3>
+   <div class="meta">Kalash Yatra and Saraswati Puja events</div>
+   <ul>
+    <li>Led and coordinated teams from planning to successful completion.</li>
+    <li>Assigned responsibilities and solved problems on the spot in busy, live situations.</li>
+    <li>Managed event budgets and transactions of about Rs. 3 lakh.</li>
+    <li>Organized Kalash Yatra 2025 and is now planning Kalash Yatra 2026.</li>
+   </ul>
+  </div>
+ </div>
+</div></section>
+
+<section id="education"><div class="wrap head">
+ <h2>Education &amp; skills</h2>
+ <div class="body">
+  <dl class="kv">
+   <dt>2026</dt><dd>Intermediate (12th), Arts - BSEB, 60%</dd>
+   <dt>2023</dt><dd>Diploma in Computer Application (6 months)</dd>
+   <dt>2021</dt><dd>Matriculation (10th) - BSEB, 57.7%</dd>
+  </dl>
+  <div class="tags">
+   <span>MS Word</span><span>MS Excel</span><span>MS PowerPoint</span><span>Documentation</span><span>Data entry</span>
+   <span>Leadership</span><span>Team coordination</span><span>Problem solving</span><span>Fast learner</span>
+  </div>
+ </div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap head">
+ <h2>Contact</h2>
+ <div class="body">
+  <p>Hiring for a safety role or contract? Reach out directly.</p>
+  <a class="big" href="tel:+917320064400">+91 73200 64400</a>
+  <a class="big" href="mailto:abhaytiwari7320@gmail.com">abhaytiwari7320@gmail.com</a>
+ </div>
+</div></section>
+</main>
+
+<footer>&copy; Abhay Tiwari &middot; Safety Officer</footer>
+</body>
+</html>
