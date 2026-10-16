@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Abhay Education Certificates</title>
+<meta name="description" content="Academic qualifications and professional safety certificates of Abhay Tiwari.">
+<meta name="theme-color" content="#10243e">
+
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+<style>
+:root {
+    --navy: #10243e;
+    --navy-light: #193a5b;
+    --blue: #2563eb;
+    --background: #f4f6fa;
+    --white: #ffffff;
+    --text: #202c3d;
+    --muted: #718096;
+    --border: #e4e9f0;
+    --green: #18794e;
+    --green-bg: #e9f8ef;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+.header {
+    background: linear-gradient(135deg, var(--navy), var(--navy-light));
+    color: var(--white);
+    text-align: center;
+    padding: 48px 20px 44px;
+}
+
+.brand-logo {
+    width: 64px;
+    height: 64px;
+    display: block;
+    margin: 0 auto 18px;
+}
+
+.header-tag {
+    display: inline-block;
+    padding: 5px 12px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 30px;
+    color: #dbeafe;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.header h1 {
+    font-size: clamp(27px, 5vw, 40px);
+    line-height: 1.25;
+    letter-spacing: -0.8px;
+    margin-bottom: 12px;
+}
+
+.header p {
+    color: #d4dfec;
+    font-size: 14px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.container {
+    width: min(900px, 92%);
+    margin: 36px auto 50px;
+}
+
+.section-heading {
+    margin-bottom: 24px;
+}
+
+.eyebrow {
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.section-heading h2 {
+    font-size: 25px;
+    color: var(--navy);
+    margin-bottom: 5px;
+}
+
+.section-heading p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.summary {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.summary-item {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 12px;
+    text-align: center;
+}
+
+.summary-number {
+    display: block;
+    color: var(--navy);
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.summary-label {
+    display: block;
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+.certificate-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 16px rgba(16,36,62,0.035);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.certificate-card:hover {
+    box-shadow: 0 9px 26px rgba(16,36,62,0.07);
+    transform: translateY(-2px);
+}
+
+.card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 21px;
+}
+
+.card-number {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+    background: #edf3ff;
+    color: var(--blue);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.card-title {
+    flex: 1;
+    min-width: 0;
+}
+
+.card-title h3 {
+    color: var(--navy);
+    font-size: 19px;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+}
+
+.card-title p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+.status {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 4px 10px;
+    border-radius: 30px;
+    background: var(--green-bg);
+    color: var(--green);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.details {
+    border-top: 1px solid var(--border);
+    padding-top: 19px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 19px 24px;
+}
+
+.detail-label {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 4px;
+}
+
+.detail-value {
+    font-size: 14px;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+/* Download buttons */
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    margin-top: 23px;
+    padding: 11px 17px;
+    background: var(--navy);
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+}
+
+.download-btn:hover {
+    background: var(--blue);
+}
+
+.download-btn:focus-visible {
+    outline: 3px solid #93c5fd;
+    outline-offset: 3px;
+}
+
+.download-btn svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+/* Coming soon */
+
+.coming-soon {
+    text-align: center;
+    background: white;
+    border: 1px dashed #cbd5e1;
+    border-radius: 16px;
+    padding: 35px 20px;
+    margin: 35px 0;
+}
+
+.coming-soon-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 14px;
+    border-radius: 50%;
+    background: #edf3ff;
+    color: var(--blue);
+    font-size: 25px;
+}
+
+.coming-soon-tag {
+    display: inline-block;
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.coming-soon h2 {
+    color: var(--navy);
+    font-size: clamp(20px, 4vw, 26px);
+    margin-bottom: 9px;
+}
+
+.coming-soon p {
+    color: var(--muted);
+    font-size: 14px;
+    max-width: 420px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.coming-soon-line {
+    width: 45px;
+    height: 3px;
+    background: var(--blue);
+    border-radius: 5px;
+    margin: 20px auto 0;
+}
+
+/* Footer */
+
+.footer {
+    border-top: 1px solid var(--border);
+    text-align: center;
+    padding: 25px 15px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.footer strong {
+    color: var(--navy);
+}
+
+@media (max-width: 600px) {
+    .header {
+        padding: 42px 16px 35px;
+    }
+
+    .container {
+        width: 92%;
+        margin-top: 28px;
+    }
+
+    .section-heading h2 {
+        font-size: 22px;
+    }
+
+    .certificate-card {
+        padding: 19px;
+        border-radius: 12px;
+    }
+
+    .card-title h3 {
+        font-size: 17px;
+    }
+
+    .details {
+        gap: 15px 12px;
+    }
+
+    .summary {
+        gap: 8px;
+    }
+
+    .summary-item {
+        padding: 13px 6px;
+    }
+
+    .summary-number {
+        font-size: 20px;
+    }
+
+    .summary-label {
+        font-size: 11px;
+    }
+
+    .download-btn {
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .certificate-card,
+    .download-btn {
+        transition: none;
+    }
+
+    .certificate-card:hover {
+        transform: none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+    <img src="favicon.svg" alt="Abhay Education logo" class="brand-logo">
+
+    <span class="header-tag">PERSONAL PORTFOLIO</span>
+
+    <h1>Abhay Education Certificates</h1>
+
+    <p>Academic Qualifications &amp; Professional Certifications</p>
+</header>
+
+<main class="container">
+
+    <section class="section-heading">
+        <div class="eyebrow">Education Portfolio</div>
+        <h2>My Qualifications</h2>
+        <p>Academic records and professional safety education.</p>
+    </section>
+
+    <section class="summary" aria-label="Certificate summary">
+        <div class="summary-item">
+            <span class="summary-number">02</span>
+            <span class="summary-label">Academic Records</span>
+        </div>
+
+        <div class="summary-item">
+            <span class="summary-number">01</span>
+            <span class="summary-label">Safety Diploma</span>
+        </div>
+
+        <div class="summary-item">
+            <span class="summary-number">03</span>
+            <span class="summary-label">Total Qualifications</span>
+        </div>
+    </section>
+
+    <!-- 10th Certificate -->
+
+    <section class="certificate-card">
+        <div class="card-header">
+            <div class="card-number">01</div>
+
+            <div class="card-title">
+                <h3>Matriculation — 10th</h3>
+                <p>Secondary School Education</p>
+                <span class="status">Completed</span>
+            </div>
+        </div>
+
+        <div class="details">
+            <div>
+                <div class="detail-label">Name</div>
+                <div class="detail-value">Abhay Tiwari</div>
+            </div>
+
+            <div>
+                <div class="detail-label">Board</div>
+                <div class="detail-value">BSEB, Bihar</div>
+            </div>
+
+            <div>
+                <div class="detail-label">Passing Year</div>
+                <div class="detail-value">2021</div>
+            </div>
+
+            <div>
+                <div class="detail-label">Percentage</div>
+                <div class="detail-value">57.7%</div>
+            </div>
+        </div>
+
+        <a class="download-btn"
+           href="certificates/10th.pdf"
+           download="Abhay_Tiwari_10th_Certificate.pdf"
+           aria-label="Download 10th certificate PDF">
+
+            <svg viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round"
+                 aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <path d="m7 10 5 5 5-5"/>
+                <path d="M12 15V3"/>
+            </svg>
+
+            Download Certificate
+        </a>
+    </section>
+
+    <!-- 12th Certificate -->
+
+    <section class="certificate-card">
+        <div class="card-header">
+            <div class="card-number">02</div>
+
+            <div class="card-title">
+                <h3>Intermediate — 12th</h3>
+                <p>Senior Secondary Education · Science</p>
+                <span class="status">Completed</span>
+            </div>
+        </div>
+
+        <div class="details">
+            <div>
+                <div class="detail-label">Name</div>
+                <div class="detail-value">Abhay Tiwari</div>
+            </div>
+
+            <div>
+                <div class="detail-label">Board</div>
+                <div class="detail-value">BSEB, Bihar</div>
+            </div>
+
+            <div>
+                <div class="detail-label">Stream</div>
+                <div class="detail-value">Science</div>
+            </div>
+
+            <div>
+                <div class="detail-label">Passing Year</div>
+                <div class="detail-value">2023</div>
+            </div>
+        </div>
+
+        <a class="download-btn"
+           href="certificates/12th.pdf"
+           download="Abhay_Tiwari_12th_Certificate.pdf"
+           aria-label="Download 12th certificate PDF">
+
+            <svg viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round"
+                 aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <path d="m7 10 5 5 5-5"/>
+                <path d="M12 15V3"/>
+            </svg>
+
+            Download Certificate
+        </a>
+    </section>
+
+    <!-- Safety Diploma -->
+
+    <section class="certificate-card">
+        <div class="card-header">
+            <div class="card-number">03</div>
+
+            <div class="card-title">
+                <h3>Advance Diploma in Fire &amp; Industrial Safety Management</h3>
+                <p>Professional Safety Qualification · ADFISM</p>
+                <span class="status">Grade A</span>
+            </div>
+        </div>
+
+        <div class="details">
+            <div>
+                <div class="detail-label">Name</div>
+                <div class="detail-value">Abhay Tiwari</div>
+            </div>
+
+            <div>
+                <div class="detail-label">Course Duration</div>
+                <div class="detail-value">12 Months</div>
+            </div>
+
+            <div>
+                <div class="detail-label">Percentage</div>
+                <div class="detail-value">85.10%</div>
+            </div>
+
+            <div>
+                <div class="detail-label">Certificate Issue Date</div>
+                <div class="detail-value">09 June 2025</div>
+            </div>
+        </div>
+
+        <a class="download-btn"
+           href="certificates/safety.pdf"
+           download="Abhay_Tiwari_Safety_Certificate.pdf"
+           aria-label="Download safety diploma certificate PDF">
+
+            <svg viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round"
+                 aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <path d="m7 10 5 5 5-5"/>
+                <path d="M12 15V3"/>
+            </svg>
+
+            Download Certificate
+        </a>
+    </section>
+
+    <!-- New Certificates Coming Soon -->
+
+    <section class="coming-soon">
+        <div class="coming-soon-icon" aria-hidden="true">✦</div>
+
+        <span class="coming-soon-tag">COMING SOON</span>
+
+        <h2>New Certificates Coming Soon</h2>
+
+        <p>
+            More qualifications and professional certificates
+            will be added here soon. Stay tuned for updates.
+        </p>
+
+        <div class="coming-soon-line"></div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <p><strong>Abhay Education documents</strong></p>
+    <p>Educational &amp; Prosonal Portfolio · © <span id="year">2026</span></p>
+</footer>
+
+<script>
+    // Automatically update the copyright year.
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+</script>
+
+</body>
+</html>
