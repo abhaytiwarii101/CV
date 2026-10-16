@@ -5,9 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Abhay Education Certificates</title>
-<meta name="description" content="Academic qualifications and professional safety certificates of Abhay Tiwari.">
+
+<meta name="description"
+content="Educational qualifications and professional safety certificates of Abhay Tiwari.">
+
 <meta name="theme-color" content="#10243e">
 
+<!-- Website Favicon -->
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
 <style>
@@ -42,24 +46,36 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+/* HEADER */
+
 .header {
-    background: linear-gradient(135deg, var(--navy), var(--navy-light));
+    background: linear-gradient(
+        135deg,
+        var(--navy),
+        var(--navy-light)
+    );
+
     color: var(--white);
     text-align: center;
-    padding: 48px 20px 44px;
+    padding: 45px 20px 42px;
 }
 
-.brand-logo {
-    width: 64px;
-    height: 64px;
-    display: block;
+.profile-photo {
+    width: 105px;
+    height: 105px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid rgba(255,255,255,0.9);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
     margin: 0 auto 18px;
+    display: block;
+    background: #e5e7eb;
 }
 
 .header-tag {
     display: inline-block;
     padding: 5px 12px;
-    margin-bottom: 15px;
+    margin-bottom: 14px;
     border: 1px solid rgba(255,255,255,0.25);
     border-radius: 30px;
     color: #dbeafe;
@@ -69,10 +85,10 @@ body {
 }
 
 .header h1 {
-    font-size: clamp(27px, 5vw, 40px);
-    line-height: 1.25;
-    letter-spacing: -0.8px;
-    margin-bottom: 12px;
+    font-size: clamp(26px, 5vw, 40px);
+    line-height: 1.3;
+    letter-spacing: -0.7px;
+    margin-bottom: 10px;
 }
 
 .header p {
@@ -82,13 +98,15 @@ body {
     margin: 0 auto;
 }
 
+/* MAIN CONTAINER */
+
 .container {
     width: min(900px, 92%);
-    margin: 36px auto 50px;
+    margin: 35px auto 50px;
 }
 
 .section-heading {
-    margin-bottom: 24px;
+    margin-bottom: 23px;
 }
 
 .eyebrow {
@@ -101,8 +119,8 @@ body {
 }
 
 .section-heading h2 {
-    font-size: 25px;
     color: var(--navy);
+    font-size: 25px;
     margin-bottom: 5px;
 }
 
@@ -111,25 +129,27 @@ body {
     font-size: 14px;
 }
 
+/* SUMMARY */
+
 .summary {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 12px;
-    margin-bottom: 32px;
+    margin-bottom: 30px;
 }
 
 .summary-item {
     background: var(--white);
     border: 1px solid var(--border);
     border-radius: 12px;
-    padding: 16px 12px;
+    padding: 16px 10px;
     text-align: center;
 }
 
 .summary-number {
     display: block;
     color: var(--navy);
-    font-size: 22px;
+    font-size: 23px;
     font-weight: 700;
 }
 
@@ -139,6 +159,8 @@ body {
     font-size: 12px;
     margin-top: 3px;
 }
+
+/* CERTIFICATE CARDS */
 
 .certificate-card {
     background: var(--white);
@@ -159,7 +181,7 @@ body {
     display: flex;
     align-items: flex-start;
     gap: 15px;
-    margin-bottom: 21px;
+    margin-bottom: 20px;
 }
 
 .card-number {
@@ -205,12 +227,14 @@ body {
     font-weight: 700;
 }
 
+/* DETAILS */
+
 .details {
     border-top: 1px solid var(--border);
     padding-top: 19px;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 19px 24px;
+    gap: 18px 24px;
 }
 
 .detail-label {
@@ -225,17 +249,42 @@ body {
     overflow-wrap: anywhere;
 }
 
-/* Download buttons */
+/* CERTIFICATE PREVIEW */
+
+.certificate-preview {
+    margin-top: 22px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+}
+
+.certificate-preview img {
+    display: block;
+    width: 100%;
+    max-height: 650px;
+    object-fit: contain;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+.preview-caption {
+    text-align: center;
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 8px;
+}
+
+/* DOWNLOAD BUTTON */
 
 .download-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 9px;
-    margin-top: 23px;
-    padding: 11px 17px;
+    margin-top: 22px;
+    padding: 12px 17px;
     background: var(--navy);
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     font-size: 13px;
     font-weight: 600;
@@ -258,11 +307,11 @@ body {
     flex-shrink: 0;
 }
 
-/* Coming soon */
+/* COMING SOON */
 
 .coming-soon {
     text-align: center;
-    background: white;
+    background: #ffffff;
     border: 1px dashed #cbd5e1;
     border-radius: 16px;
     padding: 35px 20px;
@@ -313,7 +362,7 @@ body {
     margin: 20px auto 0;
 }
 
-/* Footer */
+/* FOOTER */
 
 .footer {
     border-top: 1px solid var(--border);
@@ -327,14 +376,21 @@ body {
     color: var(--navy);
 }
 
+/* MOBILE RESPONSIVE */
+
 @media (max-width: 600px) {
     .header {
-        padding: 42px 16px 35px;
+        padding: 38px 16px 34px;
+    }
+
+    .profile-photo {
+        width: 90px;
+        height: 90px;
     }
 
     .container {
         width: 92%;
-        margin-top: 28px;
+        margin-top: 27px;
     }
 
     .section-heading h2 {
@@ -394,25 +450,44 @@ body {
 
 <body>
 
+<!-- HEADER -->
+
 <header class="header">
-    <img src="favicon.svg" alt="Abhay Education logo" class="brand-logo">
+
+    <img
+        src="profile.jgp"
+        alt="Abhay Tiwari"
+        class="profile-photo"
+    >
 
     <span class="header-tag">PERSONAL PORTFOLIO</span>
 
     <h1>Abhay Education Certificates</h1>
 
-    <p>Academic Qualifications &amp; Professional Certifications</p>
+    <p>
+        Academic Qualifications &amp; Professional Certifications
+    </p>
+
 </header>
 
 <main class="container">
 
+    <!-- SECTION HEADING -->
+
     <section class="section-heading">
         <div class="eyebrow">Education Portfolio</div>
+
         <h2>My Qualifications</h2>
-        <p>Academic records and professional safety education.</p>
+
+        <p>
+            Academic records and professional safety education.
+        </p>
     </section>
 
+    <!-- SUMMARY -->
+
     <section class="summary" aria-label="Certificate summary">
+
         <div class="summary-item">
             <span class="summary-number">02</span>
             <span class="summary-label">Academic Records</span>
@@ -427,12 +502,15 @@ body {
             <span class="summary-number">03</span>
             <span class="summary-label">Total Qualifications</span>
         </div>
+
     </section>
 
-    <!-- 10th Certificate -->
+    <!-- 10TH CERTIFICATE -->
 
     <section class="certificate-card">
+
         <div class="card-header">
+
             <div class="card-number">01</div>
 
             <div class="card-title">
@@ -440,9 +518,11 @@ body {
                 <p>Secondary School Education</p>
                 <span class="status">Completed</span>
             </div>
+
         </div>
 
         <div class="details">
+
             <div>
                 <div class="detail-label">Name</div>
                 <div class="detail-value">Abhay Tiwari</div>
@@ -462,13 +542,26 @@ body {
                 <div class="detail-label">Percentage</div>
                 <div class="detail-value">57.7%</div>
             </div>
+
         </div>
 
-        <a class="download-btn"
-           href="certificates/10th.pdf"
-           download="Abhay_Tiwari_10th_Certificate.pdf"
-           aria-label="Download 10th certificate PDF">
+        <div class="certificate-preview">
+            <img
+                src="10th.jpg"
+                alt="10th certificate of Abhay Tiwari"
+                loading="lazy"
+            >
 
+            <p class="preview-caption">
+                Class 10th Certificate
+            </p>
+        </div>
+
+        <a
+            class="download-btn"
+            href="10th.jpg"
+            download="Abhay_Tiwari_10th_Certificate.jpg"
+        >
             <svg viewBox="0 0 24 24" fill="none"
                  stroke="currentColor" stroke-width="2"
                  stroke-linecap="round" stroke-linejoin="round"
@@ -477,15 +570,17 @@ body {
                 <path d="m7 10 5 5 5-5"/>
                 <path d="M12 15V3"/>
             </svg>
-
-            Download Certificate
+            Download 10th Certificate
         </a>
+
     </section>
 
-    <!-- 12th Certificate -->
+    <!-- 12TH CERTIFICATE -->
 
     <section class="certificate-card">
+
         <div class="card-header">
+
             <div class="card-number">02</div>
 
             <div class="card-title">
@@ -493,9 +588,11 @@ body {
                 <p>Senior Secondary Education · Science</p>
                 <span class="status">Completed</span>
             </div>
+
         </div>
 
         <div class="details">
+
             <div>
                 <div class="detail-label">Name</div>
                 <div class="detail-value">Abhay Tiwari</div>
@@ -515,13 +612,26 @@ body {
                 <div class="detail-label">Passing Year</div>
                 <div class="detail-value">2023</div>
             </div>
+
         </div>
 
-        <a class="download-btn"
-           href="certificates/12th.pdf"
-           download="Abhay_Tiwari_12th_Certificate.pdf"
-           aria-label="Download 12th certificate PDF">
+        <div class="certificate-preview">
+            <img
+                src="12th.jpg"
+                alt="12th certificate of Abhay Tiwari"
+                loading="lazy"
+            >
 
+            <p class="preview-caption">
+                Class 12th Certificate
+            </p>
+        </div>
+
+        <a
+            class="download-btn"
+            href="12th.jpg"
+            download="Abhay_Tiwari_12th_Certificate.jpg"
+        >
             <svg viewBox="0 0 24 24" fill="none"
                  stroke="currentColor" stroke-width="2"
                  stroke-linecap="round" stroke-linejoin="round"
@@ -530,25 +640,33 @@ body {
                 <path d="m7 10 5 5 5-5"/>
                 <path d="M12 15V3"/>
             </svg>
-
-            Download Certificate
+            Download 12th Certificate
         </a>
+
     </section>
 
-    <!-- Safety Diploma -->
+    <!-- SAFETY DIPLOMA -->
 
     <section class="certificate-card">
+
         <div class="card-header">
+
             <div class="card-number">03</div>
 
             <div class="card-title">
-                <h3>Advance Diploma in Fire &amp; Industrial Safety Management</h3>
+                <h3>
+                    Advance Diploma in Fire &amp; Industrial Safety Management
+                </h3>
+
                 <p>Professional Safety Qualification · ADFISM</p>
+
                 <span class="status">Grade A</span>
             </div>
+
         </div>
 
         <div class="details">
+
             <div>
                 <div class="detail-label">Name</div>
                 <div class="detail-value">Abhay Tiwari</div>
@@ -568,13 +686,14 @@ body {
                 <div class="detail-label">Certificate Issue Date</div>
                 <div class="detail-value">09 June 2025</div>
             </div>
+
         </div>
 
-        <a class="download-btn"
-           href="certificates/safety.pdf"
-           download="Abhay_Tiwari_Safety_Certificate.pdf"
-           aria-label="Download safety diploma certificate PDF">
-
+        <a
+            class="download-btn"
+            href="seafty.pdf"
+            download="Abhay_Tiwari_Safety_Certificate.pdf"
+        >
             <svg viewBox="0 0 24 24" fill="none"
                  stroke="currentColor" stroke-width="2"
                  stroke-linecap="round" stroke-linejoin="round"
@@ -583,17 +702,22 @@ body {
                 <path d="m7 10 5 5 5-5"/>
                 <path d="M12 15V3"/>
             </svg>
-
-            Download Certificate
+            Download Safety Certificate
         </a>
+
     </section>
 
-    <!-- New Certificates Coming Soon -->
+    <!-- COMING SOON -->
 
     <section class="coming-soon">
-        <div class="coming-soon-icon" aria-hidden="true">✦</div>
 
-        <span class="coming-soon-tag">COMING SOON</span>
+        <div class="coming-soon-icon" aria-hidden="true">
+            ✦
+        </div>
+
+        <span class="coming-soon-tag">
+            COMING SOON
+        </span>
 
         <h2>New Certificates Coming Soon</h2>
 
@@ -603,17 +727,28 @@ body {
         </p>
 
         <div class="coming-soon-line"></div>
+
     </section>
 
 </main>
 
+<!-- FOOTER -->
+
 <footer class="footer">
-    <p><strong>Abhay Education documents</strong></p>
-    <p>Educational &amp; Prosonal Portfolio · © <span id="year">2026</span></p>
+
+    <p>
+        <strong>Abhay Education Certificates</strong>
+    </p>
+
+    <p>
+        Educational &amp; Professional Portfolio ·
+        &copy; <span id="year">2026</span>
+    </p>
+
 </footer>
 
 <script>
-    // Automatically update the copyright year.
+    // Automatically update copyright year.
     document.getElementById("year").textContent =
         new Date().getFullYear();
 </script>
